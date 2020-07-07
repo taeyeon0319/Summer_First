@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'shared/_navbar.html' %}
+<h1> 용인에 대해서 알아볼까요? </h1>
+
+<h4>용인은 경기도 중남부에 위치한 시로 현재 경기도에서 수원시와 고양시에 이어 인구 3위의 도시입니다.</h4>
+<h4>용인시는 21세기 들어 한국에서 가장 급격하게 성장한 도시이자 급격하게 인구가 늘어난 도시입니다.</h4>
+<h4>또한 유수의 관광도시이기도 하죠! 에버랜드, 캐리비안 베이, 한국민속촌, 양지파인리조트 등 전국적으로 유명한 레저, 관광시설의 덕, 전국 지방자치단체 중 관광객 1위 자리를 차지하고 있답니다.</h4>
+<h4>인구는 2020년 06월 기준 107만 3,115명입니다.</h4>
+<h4>그리고 면적은 591.33km^2이죠.</h4>
+<h4>용인에는 맛있는 맛집, 놀거리 정말 많고 다양해요!</h4>
+<h4>용인에 놀러오세요!!!</h4> 
+
+<img src="{% static 'images/에버랜드.jpg' %}" width = "400"alt="에버랜드" style="margin-top:50px; margin-left:50px;">
+<img src="{% static 'images/테마파크.jpg' %}" width = "300"alt="농촌 테마파크" style="margin-top:50px; margin-left:50px;">
+<img src="{% static 'images/아파트.jpg' %}" width = "300"alt="아파트사진" style="margin-top:50px; margin-left:50px;">
+<img src="{% static 'images/축제.jpg' %}" width = "300"alt="축제" style="margin-top:50px; margin-left:50px;">
+{% endblock %}
