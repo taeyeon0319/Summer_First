@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-import introduction.urls
 from . import views
 
 urlpatterns = [
@@ -25,4 +24,5 @@ urlpatterns = [
     path('delicious/', include('delicious.urls')),
     path('photo/', include('photo.urls')),
     path('activity/', include('activity.urls')),
+    path('posts/', include('posts.urls')),
 ]

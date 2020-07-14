@@ -43,3 +43,15 @@ h5{
     font-size: 25px;
     font-weight: bold;
 }
+
+span{
+    position:absolute;
+    word-break:break-all; 
+    text-align:left; 
+    margin-left:20px; 
+}
+
+.Y{
+    margin-top:50px; 
+    margin-left:50px;
+}
