@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 
 # Create your views here.
@@ -9,7 +9,8 @@ def create(request):
     if request.method == "POST":
         title = request.POST.get('title')
         content = request.POST.get('content')
-        Post.objects.create(title=title, content=content)
+        Post.object.create(title=title, content=content, image=image)
+        image = request.FILES.get('image')
         return redirect('posts:main')
 
 def main(request):
@@ -20,4 +21,19 @@ def show(request, id):
     post = Post.objects.get(pk=id)
     return render(request, 'posts/show.html', {'post':post})
 
-# Create your views here.
+def update(request, id):
+    post = get_object_or_404(Post, pk=id)
+    if request.method == "POST":
+        post.title = request.POST['title']
+        post.content = request.POST['content']
+        post.image = request.FILES.get('image')
+        post.save()
+        return redirect('posts:show', post.id)
+    return render(request, 'posts/update.html', {"post":post})
+
+def delete(request, id):
+    post = get_object_or_404(Post, pk=id)
+    post.delete()
+    return redirect("posts:main")
+
+
