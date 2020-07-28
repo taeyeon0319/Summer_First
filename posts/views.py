@@ -9,8 +9,9 @@ def create(request):
     if request.method == "POST":
         title = request.POST.get('title')
         content = request.POST.get('content')
-        Post.object.create(title=title, content=content, image=image)
+        Post.objects.create(title=title, content=content, image=image)
         image = request.FILES.get('image')
+        user = request.user
         return redirect('posts:main')
 
 def main(request):

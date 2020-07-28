@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% if user.is_authenticated %} 
 {% include 'shared/_navbar.html' %}
 <div class="container">
     <h1>글 목록입니다.</h1>
@@ -21,4 +22,9 @@
         {% endfor %}
     </div>
 </div>
-{% endblock %}
+{% else %}
+    <h3>로그인 후 이용이 가능합니다.</h3>
+    <a href="{% url 'account_login' %}" class="btn btn-warning">로그인</a>
+    <a href="{% url 'account_signup' %}" class="btn btn-warning">회원가입</a>
+{% endif %}
+{% endblock %}

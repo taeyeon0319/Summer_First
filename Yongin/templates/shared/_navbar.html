@@ -24,6 +24,20 @@
           <a class="nav-link" href="{% url 'posts:main' %}">용인인의 추천!</a>
         </li>
       </ul>
-     
+      <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
+                <div class="dropdown-menu">
+                  {% if user.is_authenticated %} 
+                    <a class="dropdown-item" href="{% url 'account_logout' %}" class="nav-link">Logout</a>
+                    <a class="dropdown-item" href="{% url 'account_change_password' %}">Change PW</a>
+                  {% else %}
+                    <a class="dropdown-item" href="{% url 'account_login' %}" class="nav-link">Login</a>
+                    <a class="dropdown-item" href="{% url 'account_signup' %}" class="nav-link">Sign Up</a>
+                  {% endif %}
+                </div>
+              </li>
+        </ul>
+        
     </div>
   </nav>
