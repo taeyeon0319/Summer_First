@@ -23,9 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('introduction/', include('introduction.urls')),
     path('', views.main, name="main"),
-    path('delicious/', include('delicious.urls')),
-    path('photo/', include('photo.urls')),
-    path('activity/', include('activity.urls')),
     path('posts/', include('posts.urls')),
     path('accounts/', include('allauth.urls')),
 ]

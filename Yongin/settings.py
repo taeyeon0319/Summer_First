@@ -38,14 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'introduction',
-    'delicious',
-    'photo',
-    'activity',
     'posts',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    'allauth.socialaccount.providers.google',
 
 ]
 
@@ -133,7 +132,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'myblog', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Yongin', 'media')
 
 AUTHENTICATION_BACKENDS = [
 
