@@ -49,6 +49,21 @@ def create_comment(request, post_id):
         Comment.objects.create(content=comment_content, writer=current_user, post=post)
     return redirect('posts:show', post_id)
 
+def update_comment(request, comment_id):
+    comment=get_object_or_404(Comment, pk=comment_id)
+    if request.method == "POST":
+        post_id = comment.post.id
+        comment.content=request.POST.get('content')
+        comment.save()
+        return redirect('posts:show', post_id)
+    return render(request, 'posts/update_comment.html',{"comment":comment})
+
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    post_id = comment.post.id
+    comment.delete()
+    return redirect('posts:show', post_id)
+
 @login_required
 def post_like(request, post_id):
     post = get_object_or_404(Post, pk=post_id)

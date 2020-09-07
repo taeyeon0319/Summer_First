@@ -39,6 +39,10 @@
                 <div class="card-body">
                     <b>{{ comment.writer }}</b> : {{ comment.content }}<br>
                     <small>{{ comment.created_at }}</small>
+                    {% if user == comment.writer %}
+                        <a href="{% url 'posts:update_comment' comment.id %}" class="btn btn-primary">댓글 수정</a>
+						<a href="{% url 'posts:delete_comment' comment.id %}" class="btn btn-danger">댓글 삭제</a>
+					{% endif %}
                 </div>
             </div>
         {% endfor %}

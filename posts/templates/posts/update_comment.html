@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container"> 
+	<h1> 댓글 수정 </h1> 
+	<form action="{% url 'posts:update_comment' comment.id %}" method="POST" enctype="multipart/form-data"> 
+		{% csrf_token %} 
+		 <div class="form-group">
+			 <label>댓글 내용</label>
+			 <textarea class="form-control" name="content"> {{ comment.content }} </textarea>
+		 </div>
+ 		<input type="submit" value="댓글 수정" class="btn btn-outline-primary">
+	 </form> 
+</div>
+{% endblock %}
