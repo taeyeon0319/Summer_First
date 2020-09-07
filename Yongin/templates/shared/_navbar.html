@@ -23,6 +23,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'posts:main' %}">용인인의 추천!</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'posts:like_list' %}">좋아요한 글♥!</a>
+        </li>
         {% if user.is_authenticated %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'account_logout' %}">로그아웃</a>
