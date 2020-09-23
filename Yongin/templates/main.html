@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'shared/_navbar.html' %}
+<img src="{% static 'images/용인시 로고.png' %}" width = "300"alt="용인시 로고" style="margin-top:50px;">
+<h2 style="margin-top:20px; margin-left: 70px;">용인시 로고</h2> 
+<img src="{% static 'images/용인시 지도.png' %}" width = "300"alt="용인시 지도" style="margin-top:50px; margin-left:20px;">
+<h2 style="margin-top:20px; margin-left: 70px;">용인시 지도</h2> 
+<img src="{% static 'images/마스코트.gif' %}" width = "300"alt="용인시 마스코트" style="margin-top:50px;">
+<h2 style="margin-top:20px; margin-left: 70px;">용인시 마스코트</h2> 
+
+{% endblock %}

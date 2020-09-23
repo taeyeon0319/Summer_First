@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'shared/_navbar.html' %}
+<h1> 용인에서 인생샷 찍자! </h1>
+<div>
+    <img src="{% static 'images/농촌테마파크.jpg' %}" width = "180"alt="농촌테마파트" style="margin-top:10px; margin-left:20px;">
+    <span style="margin-top:10px;"><h5>#농촌테마파크</h5></span>
+    <span style="margin-top:60px;">
+        <h7>도심속에서 농촌문화와 자연을 느끼고 접할 수 있는 정원!</h7></span>
+    <span style="margin-top:90px;">
+        <h7>경기도 용인시 처인구 원삼면 사암리 산 174-4</h7></span>
+    <span style="margin-top:120px;">
+        <h7>매주 월요일, 1월 1일, 설날, 추석당일 휴무</h7></span>
+    <span style="margin-top:150px;">
+        <h7>031-324-4025</h7></span>
+</div>
+<div>
+    <img src="{% static 'images/한택식물원.jpg' %}" width = "180"alt="한택식물원" style="margin-top:10px; margin-left:20px;">
+    <span style="margin-top:10px;"><h5>#한택식물원</h5></span>
+    <span style="margin-top:60px;">
+        <h7>힐링과 동시에 인생샷 건질 수 있는 자연 속 식물원</h7></span>
+    <span style="margin-top:90px;">
+        <h7>경기도 용인시 처인구 백암면 한택로 2</h7></span>
+    <span style="margin-top:120px;">
+        <h7>연중 무휴</h7></span>
+    <span style="margin-top:150px;">
+        <h7>031-333-3558</h7></span>
+</div>
+<div>
+    <img src="{% static 'images/한국민속촌.jpg' %}" width = "250" height ="180" alt="한국민속촌" style="margin-top:10px; margin-left:20px;">
+    <span style="margin-top:10px;"><h5>#한국민속촌</h5></span>
+    <span style="margin-top:60px;">
+        <h7>한복입고 사진찍으면 너무 예뻐! 놀이기구도 있으니 재밌게 놀 수 있어</h7></span>
+    <span style="margin-top:90px;">
+        <h7>경기도 용인시 기흥구 민속촌로 90</h7></span>
+    <span style="margin-top:120px;">
+        <h7>연중 무휴</h7></span>
+    <span style="margin-top:150px;">
+        <h7>031-288-0000</h7></span>
+</div>
+
+{% endblock %}
